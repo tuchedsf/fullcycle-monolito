@@ -9,7 +9,7 @@ export default class InvoiceFacadeFactory {
     const repository = new TransactionRepostiory();
     const find = new FindInvoiceUseCase(repository);
     const create = new GenerateInvoiceUseCase(repository);
-    const facade = new InvoiceFacade({ create: create, find: find });
+    const facade = new InvoiceFacade({create: create, find:find});
     return facade;
   }
 }
